@@ -1,7 +1,11 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="input-item">
+      <label class="input-item_label">
+        画像を選択
+        <input type="file">
+      </label>
+    </div>
   </div>
 </template>
 
@@ -16,3 +20,21 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+label > input {
+  display: none;
+}
+
+label {
+  padding: 0 1rem;
+  border: solid 1px #888;
+} 
+
+label::after {
+  content: '+';
+  font-size: 1rem;
+  color: #888;
+  padding-left: 1rem;
+}
+</style>
